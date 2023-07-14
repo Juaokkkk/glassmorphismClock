@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins" sans-serif;
+  }
+  
+  body {
+    background-color: black;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .ball-1 {
+    background: linear-gradient(#006eff, #8303eb);
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 15%;
+    margin-left: 25%;
+    z-index: 0;
+    animation-name: move-up;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  .ball-2 {
+    background: linear-gradient(#9213e7, #4f0de9);
+    background-color: #9213e7;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 55%;
+    margin-left: 59%;
+    z-index: 0;
+    animation-name: move-down;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes move-up {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes move-down {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .clock {
+    width: 640px;
+    height: 640px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .second {
+    width: 5px;
+    height: 240px;
+    position: absolute;
+    background-color: aliceblue;
+    transform: translateY(-50%);
+    transform-origin: bottom center;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  .minute {
+    width: 8px;
+    height: 200px;
+    position: absolute;
+    background-color: rgb(0, 110, 255);
+    transform: translateY(-50%);
+    transform-origin: bottom center;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  .hour {
+    width: 12px;
+    height: 150px;
+    position: absolute;
+    background-color: rgb(146, 19, 231);
+    transform: translateY(-50%);
+    transform-origin: bottom center;
+    border-radius: 13px;
+    z-index: 1;
+  }
+  
+  .dot {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: absolute;
+    z-index: 2;
+  }
+  
